@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная - Аренда автомобилей</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+    <header>
+        <h1>Аренда автомобилей</h1>
+        <button class="register-button" onclick="openModal()">Регистрация</button>
+    </header>
+    
+    <nav>
+        <a href="index.html">Главная</a>
+        <a href="services.html">Услуги</a>
+        <a href="contact.html">Контакты</a>
+        <a href="video.html">Видео</a>
+    </nav>
+    
+    <div class="content">
+        <section class="intro">
+            <h2>Добро пожаловать в нашу компанию по аренде автомобилей</h2>
+            <p>Мы предоставляем удобный и доступный сервис аренды автомобилей для любого случая — будь то бизнес-встреча, путешествие или особое событие. У нас вы найдете автомобили различных классов, чтобы подобрать тот, который идеально подойдет именно вам.</p>
+        </section>
+    
+        <section class="benefits">
+            <h3>Наши преимущества</h3>
+            <ul>
+                <li>Широкий выбор автомобилей от эконом до люкс класса</li>
+                <li>Гибкие условия аренды на любой срок</li>
+                <li>Доступные цены и прозрачные тарифы</li>
+                <li>Поддержка 24/7 для всех клиентов</li>
+            </ul>
+        </section>
+    
+        <section class="services">
+            <h3>Наши услуги</h3>
+            <p>Мы предлагаем аренду автомобилей для любых нужд:</p>
+            <ul>
+                <li>Краткосрочная и долгосрочная аренда</li>
+                <li>Трансферы из аэропорта</li>
+                <li>Аренда с водителем</li>
+                <li>VIP-обслуживание и аренда автомобилей премиум класса</li>
+            </ul>
+        </section>
+    
+        <section class="testimonials">
+            <h3>Отзывы наших клиентов</h3>
+            <blockquote>
+                <p>"Отличный сервис! Машину доставили вовремя, никаких проблем за время аренды не возникло. Рекомендую!"</p>
+                <footer>— Александр К.</footer>
+            </blockquote>
+            <blockquote>
+                <p>"Приятный персонал и хорошие цены. Оформление заняло всего несколько минут!"</p>
+                <footer>— Мария Л.</footer>
+            </blockquote>
+        </section>
+    </div>
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Создайте аккаунт</h2>
+            <form class="registration-form">
+                <label for="username">Имя пользователя:</label>
+                <input type="text" id="username" name="username" required>
+                
+                <label for="email">Электронная почта:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="password">Пароль:</label>
+                <input type="password" id="password" name="password" required>
+                
+                <button type="submit">Зарегистрироваться</button>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <p>© 2023 Аренда автомобилей. Все права защищены.</p>
+    </footer>
+    <script>
+        // Открытие модального окна
+        function openModal() {
+            document.getElementById("registerModal").style.display = "block";
+        }
+        
+        // Закрытие модального окна
+        function closeModal() {
+            document.getElementById("registerModal").style.display = "none";
+        }
+    
+        // Закрытие модального окна при клике за его пределами
+        window.onclick = function(event) {
+            let modal = document.getElementById("registerModal");
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+    </body>
+    </html>
+    
